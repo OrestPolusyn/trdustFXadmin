@@ -1,0 +1,46 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.page {
+  overflow: hidden;
+  height: 100%;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+  color: var(--color-dark-400);
+  background-color: var(--color-white);
+  scroll-padding-top: var(--header-height, 80px);
+
+  &__body {
+    min-width: 320px;
+    min-height: 100%;
+  }
+
+  @include media(mobile-m) {
+    @include font-size(14, 16);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+
+  &--wide {
+    max-width: var(--container-wide);
+  }
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  .btn {
+    @include font-size(18, 22);
+  }
+}

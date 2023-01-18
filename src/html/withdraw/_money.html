@@ -1,0 +1,137 @@
+<div class="money">
+  <h2 class="money__title title title--secondary">
+    Withdraw money
+  </h2>
+
+  <h3 class="money__subtitle title title--small">
+    Select eCurrency
+  </h3>
+
+  <ul class="money__list">
+    <li class="money__item money__item--paycore">
+      <input class="sr-only" type="radio" name="withdraw" id="core" checked>
+
+      <label class="money__radio" for="core">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/pay-core.svg" width="210" height="35" alt="Pay core logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="dogecoin">
+
+      <label class="money__radio" for="dogecoin">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/dogecoin-logo.png" width="210" height="35" alt="Dogecoin logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="ripple">
+
+      <label class="money__radio" for="ripple">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/ripple-logo.png" width="210" height="35" alt="Ripple logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="ton">
+
+      <label class="money__radio" for="ton">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/ton-logo.png" width="210" height="35" alt="Ton logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="tron">
+
+      <label class="money__radio" for="tron">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/tron.png" width="210" height="35" alt="Tron logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item money__item--tether">
+      <input class="sr-only" type="radio" name="withdraw" id="tether">
+
+      <label class="money__radio" for="tether">
+        <div class="money__radio-content">
+          <img class="money__image" src="./images/logos/trc-20.svg" width="210" height="35" alt="Tether logo"
+            loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </div>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+  </ul>
+
+  <form class="money__form" action="#">
+    <h3 class="money__subtitle title title--small">
+      Withdraw
+    </h3>
+
+    <input class="money__withdraw" type="number" placeholder="0.1000000" step="0.0000001">
+
+    <button class="money__form-btn btn" type="submit">
+      Request
+    </button>
+  </form>
+</div>

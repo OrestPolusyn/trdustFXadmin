@@ -1,0 +1,59 @@
+@use "../../utils/mixins"as*;
+@use "../../utils/functions/"as*;
+
+.numbers {
+  @include flex-sb;
+
+  margin-bottom: 27px;
+
+  &__item {
+    position: relative;
+    padding: 5px 0 22px;
+    width: 100%;
+    max-width: 145px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-gray-50);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: var(--color-gradient-main);
+      opacity: 0.1;
+    }
+
+    >* {
+      display: block;
+    }
+  }
+
+  &__image {
+    margin-top: 4px;
+    margin-bottom: rem(27);
+    margin-left: 8px;
+  }
+
+  &__number {
+    @include font-size(18, 21);
+
+    margin-bottom: 7px;
+    font-weight: 700;
+  }
+
+  &__desc {
+    @include font-size(14, 16);
+
+    opacity: 0.5;
+  }
+}

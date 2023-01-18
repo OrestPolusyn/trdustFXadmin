@@ -1,0 +1,88 @@
+@use "../utils/mixins"as*;
+@use "../utils/functions/"as*;
+
+.content {
+  width: 100%;
+
+  &__wellcome {
+    @include flex-all-sb;
+
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid var(--color-gray-50);
+    padding: 25px rem(42) 25px 27px;
+    width: calc(100% - 260px);
+    background-color: var(--color-white);
+  }
+
+  &__date {
+    @include font-size(18, 21);
+
+    margin-bottom: 6px;
+    color: rgba(26, 26, 26, 0.5);
+
+    span {
+      &:not(:last-child) {
+        margin-right: rem(30);
+      }
+    }
+  }
+
+  &__inner {
+    @include flex-sb;
+
+    padding-top: var(--wellcome-height);
+    height: 100%;
+  }
+
+  &__main {
+    overflow-y: auto;
+    padding: rem(33) rem(28);
+    width: 100%;
+
+    @include media(tablet-wide) {
+      padding: rem(20);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    &--cryptomaker {
+      margin-bottom: rem(42);
+    }
+  }
+
+  &--deposit {
+    .form {
+      margin-bottom: 0;
+      padding-top: rem(42);
+
+      &::before {
+        top: 0;
+        bottom: auto;
+      }
+
+      &__grid {
+        grid-template-columns: 1fr 1.6fr;
+      }
+
+      &__item {
+        &--radios {
+          grid-area: auto;
+        }
+      }
+    }
+  }
+
+  &--thin {
+    .content {
+      &__main {
+        padding: 19px rem(28);
+      }
+    }
+  }
+}

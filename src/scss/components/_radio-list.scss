@@ -1,0 +1,70 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.radios {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 260px;
+  gap: 23px 0;
+
+  &__image {
+    margin-right: 5px;
+    width: 100%;
+    max-width: 16px;
+  }
+
+  &__item {
+    input:checked {
+      +.radios__btn {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include flex;
+
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border: 1px solid var(--color-gray-150);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 2px;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      background: var(--color-gradient-main);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    span {
+      @include font-size(14, 16);
+
+      text-transform: capitalize;
+    }
+  }
+
+  &--list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: rem(40);
+  }
+}

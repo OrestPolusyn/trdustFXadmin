@@ -1,0 +1,65 @@
+<form class="account" action="#">
+  <h2 class="account__title title title--secondary">
+    Your Account
+  </h2>
+
+  <div class="account__form">
+    <fieldset class="account__fieldset account__fieldset--user">
+      <legend>
+        Account name
+      </legend>
+
+      <input class="account__field" name="username" type="text" placeholder="Account name" readonly>
+    </fieldset>
+
+    <fieldset class="account__fieldset account__fieldset--date">
+      <legend>
+        Registration date
+      </legend>
+
+      <input class="account__field" name="registration" type="text" placeholder="Oct 6 2022 11:26:38 AM" readonly>
+    </fieldset>
+
+    <fieldset class="account__fieldset account__fieldset--user">
+      <legend>
+        your full name
+      </legend>
+
+      <input class="account__field" name="username" type="text" placeholder="Alex" readonly>
+    </fieldset>
+
+    <fieldset class="account__fieldset account__fieldset--password">
+      <legend>
+        new password
+      </legend>
+
+      <input class="account__field" name="username" type="password" value="1234">
+
+      <button class="account__password" type="button" aria-label="Show/hide button"></button>
+    </fieldset>
+
+    <fieldset class="account__fieldset account__fieldset--password">
+      <legend>
+        retype password
+      </legend>
+
+      <input class="account__field" name="username" type="password" value="1234">
+
+      <button class="account__password" type="button" aria-label="Show/hide button"></button>
+    </fieldset>
+
+    <fieldset class="account__fieldset account__fieldset--email">
+      <legend>
+        e-mail
+      </legend>
+
+      <input class="account__field" name="username" type="email" placeholder="user@nametest.com" readonly>
+    </fieldset>
+  </div>
+
+  <include src="./html/components/_currency.html"></include>
+
+  <button class="account__btn btn" type="submit">
+    Update
+  </button>
+</form>

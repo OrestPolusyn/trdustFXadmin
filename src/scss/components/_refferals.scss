@@ -1,0 +1,63 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.refferals {
+  &__title {
+    margin-bottom: rem(28);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(25);
+    border-radius: calc(var(--radius-main) * 2.5);
+    background: var(--color-aside);
+  }
+
+  &__item {
+    @include flex-v-center;
+
+    padding: 16px 25px 25px;
+  }
+
+  &__image {
+    max-width: 30px;
+
+    &--total {
+      margin-right: 30px;
+      margin-left: 5px;
+      height: 25px;
+      object-fit: contain;
+    }
+  }
+
+  &__item-content {
+    @include flex-v-center;
+
+    margin: 0 auto;
+  }
+
+  &__item-name {
+    @include font-size(16, 19);
+
+    display: inline-block;
+    margin-right: 15px;
+    width: 100%;
+    max-width: 130px;
+    letter-spacing: -0.03em;
+  }
+
+  &__item-number {
+    @include font-size(24, 28);
+
+    font-weight: 900;
+  }
+
+  &__signups {
+    margin-bottom: rem(30);
+  }
+
+  &__status {
+    margin-bottom: rem(32);
+  }
+}

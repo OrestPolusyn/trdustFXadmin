@@ -1,0 +1,21 @@
+<footer class="footer">
+
+</footer>
+
+<script >
+  const getWellcomeHeaderHeight = () => {
+    const headerHeight =
+      document.querySelector('.content__wellcome')?.offsetHeight;
+
+    document.documentElement.style.setProperty(
+      '--wellcome-height',
+      `${headerHeight}px`
+    );
+
+    return headerHeight;
+  };
+
+  window.addEventListener('resize', getWellcomeHeaderHeight);
+  getWellcomeHeaderHeight();
+
+</script>

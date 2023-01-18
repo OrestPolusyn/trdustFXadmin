@@ -1,0 +1,68 @@
+@use "../utils/mixins"as*;
+@use "../utils/functions/"as*;
+
+.currency {
+  border-radius: calc(var(--radius-main) * 2.5);
+  padding: rem(35) rem(38);
+  background: var(--color-gradient-gray);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px rem(40);
+  }
+
+  &__title {
+    margin-bottom: rem(23);
+  }
+
+  &__name {
+    @include font-size(8, 9);
+
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    @include flex-all-sb;
+  }
+
+  &__logo {
+    @include flex-all-center;
+
+    position: relative;
+    margin-right: 21px;
+    padding: 10px 14px;
+    width: 100%;
+    height: 55px;
+    max-width: 110px;
+
+    &::before {
+      @include border-gradient;
+
+      border-radius: var(--radius-main);
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    &--ligthcoin {
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+
+  &__code {
+    @include font-size(16, 19);
+
+    border: 1px solid var(--color-gray-100);
+    border-radius: var(--radius-main);
+    padding: 20px 16px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}

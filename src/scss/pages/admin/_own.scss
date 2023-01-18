@@ -1,0 +1,75 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.own {
+  &__info {
+    @include flex-v-center;
+
+    margin-top: -3px;
+    margin-bottom: rem(33);
+  }
+
+  &__title {
+    @include font-size(24, 24);
+
+    margin-right: 18px;
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    position: relative;
+    border: 1px solid var(--color-blue-400);
+    border-radius: var(--radius-main);
+    padding: 12px;
+    width: 100%;
+    max-width: 150px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      width: 22px;
+      height: 22px;
+      background-image: url("../icons/money.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    >span {
+      margin-left: rem(25);
+      font-family: var(--font-family-secondary);
+    }
+  }
+
+  &__text {
+    @include flex-all-center;
+
+    position: relative;
+    margin-bottom: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 50%;
+      z-index: -1;
+      width: calc(100% + 28px * 2);
+      height: 1px;
+      background-color: var(--color-gray-150);
+    }
+
+    span {
+      @include font-size(18, 17);
+
+      padding: 15px 15px 15px 10px;
+      font-family: var(--font-family-secondary);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      background-color: var(--color-white);
+    }
+  }
+}

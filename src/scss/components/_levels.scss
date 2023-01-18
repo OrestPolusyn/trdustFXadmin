@@ -1,0 +1,31 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  border-radius: calc(var(--radius-main) * 2.5);
+  padding: rem(30) rem(32);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(195, 207, 226, 0.3) 100%);
+
+  &__text {
+    @include font-size(14, 14);
+
+    margin-bottom: 15px;
+    color: rgba(26, 26, 26, 0.5);
+  }
+
+  &__list {
+    @include font-size(18, 21);
+
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

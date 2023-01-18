@@ -1,0 +1,21 @@
+@mixin color-gradient {
+  font-family: var(--font-family-secondary);
+  color: transparent;
+  background: var(--color-gradient-main);
+  background-clip: text;
+}
+
+@mixin border-gradient {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  background: var(--color-gradient-main) border-box;
+}

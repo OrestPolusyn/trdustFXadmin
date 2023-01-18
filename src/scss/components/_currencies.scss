@@ -1,0 +1,49 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.currencies {
+  overflow-y: auto;
+  border-left: 1px solid var(--color-gray-50);
+  padding: rem(28) rem(25) rem(28) rem(20);
+  width: 100%;
+  height: 100%;
+  max-width: 287px;
+
+  &__title {
+    margin-bottom: 19px;
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    span {
+      display: block;
+      padding-top: 5px;
+    }
+  }
+
+  &__name {
+    margin-right: auto;
+  }
+
+  &__ammount {
+    @include color-gradient;
+    @include font-size(18, 21);
+  }
+
+  &__image {
+    margin-right: 8px;
+    width: 100%;
+    height: 40px;
+    max-width: 45px;
+    object-fit: contain;
+  }
+
+  @include media(desktop) {
+    padding: rem(20);
+  }
+}

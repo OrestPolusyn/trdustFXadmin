@@ -1,0 +1,111 @@
+@use "../../utils/mixins"as*;
+@use "../../utils/functions/"as*;
+
+.account {
+  &__title {
+    margin-bottom: rem(25);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(36);
+    gap: rem(30);
+  }
+
+  &__fieldset {
+    position: relative;
+    border: 1px solid var(--color-gray-100);
+    border-radius: var(--radius-main);
+    letter-spacing: -0.03em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 19px;
+      top: 50%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    legend {
+      @include font-size(8, 9);
+
+      position: absolute;
+      left: 13px;
+      top: -6px;
+      padding: 0 7px;
+      text-transform: uppercase;
+      background-color: var(--color-white);
+    }
+
+    &--user {
+      &::before {
+        width: 19px;
+        height: 19px;
+        background-image: url('../icons/user.svg');
+      }
+    }
+
+    &--date {
+      &::before {
+        width: 15px;
+        height: 15px;
+        background-image: url('../icons/calendar.svg');
+      }
+    }
+
+    &--email {
+      &::before {
+        width: 18px;
+        height: 18px;
+        background-image: url('../icons/email.svg');
+      }
+    }
+  }
+
+  &__field {
+    @include font-size(16, 19);
+
+    outline-color: var(--color-blue-400);
+    border-radius: var(--radius-main);
+    padding: 16px 20px;
+    width: 100%;
+    letter-spacing: -0.03em;
+
+    &:read-only {
+      outline: none;
+      cursor: default;
+    }
+  }
+
+  &__password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 22px;
+    height: 15px;
+    background-color: transparent;
+    transform: translateY(-50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../icons/eye.svg');
+      background-position: center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}

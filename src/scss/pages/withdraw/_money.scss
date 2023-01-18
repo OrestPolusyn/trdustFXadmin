@@ -1,0 +1,123 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.money {
+  margin-top: -5px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: rem(26);
+    letter-spacing: -0.03em;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-bottom: rem(43);
+    gap: rem(30) rem(26);
+  }
+
+  &__radio {
+    @include flex-all-center;
+
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__radio-content {
+    @include flex-all-center;
+
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: var(--radius-main);
+    width: 100%;
+    min-height: 120px;
+    transition: box-shadow 0.2s ease;
+
+    &::before {
+      @include border-gradient;
+
+      z-index: -1;
+      border-radius: var(--radius-main);
+    }
+
+    span {
+      font-family: var(--font-family-secondary);
+      font-weight: 900;
+    }
+
+    +span {
+      @include font-size(14, 16);
+
+      color: rgba(26, 26, 26, 0.5);
+    }
+
+    &:hover {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__item {
+    input:checked {
+      +.money__radio>div {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    &--paycore {
+      .money__image {
+        margin-bottom: 15px;
+      }
+    }
+
+    &--tether {
+      .money__image {
+        max-width: 145px;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 170px;
+  }
+
+  &__form {
+    border-radius: calc(var(--radius-main) * 2.5);
+    padding: rem(29) rem(36);
+    background: var(--color-gradient-gray);
+
+    .money {
+      &__subtitle {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__withdraw {
+    display: block;
+    margin-bottom: rem(26);
+    border: 1px solid var(--color-gray-100);
+    border-radius: var(--radius-main);
+    padding: 17px 33px;
+    text-align: center;
+
+    &::placeholder {
+      color: var(--color-dark-400);
+    }
+  }
+
+  &__form-btn.btn {
+    @include font-size(20, 20);
+
+    padding: 20px;
+    max-width: 260px;
+  }
+}

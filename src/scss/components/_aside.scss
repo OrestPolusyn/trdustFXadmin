@@ -1,0 +1,240 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.navigation {
+  overflow-y: auto;
+  padding: rem(31) rem(32);
+  width: 100%;
+  height: 100%;
+  max-width: 260px;
+  background: var(--color-aside);
+
+  &__wallet {
+    margin-bottom: 18px;
+    border-radius: var(--radius-main);
+    width: 100%;
+    background-color: var(--color-white);
+
+    div {
+      padding: 16px 15px 21px;
+    }
+  }
+
+  &__wallet-number {
+    @include font-size(12, 14);
+
+    border-bottom: 1px solid var(--color-gray-150);
+    text-align: center;
+
+    span {
+      display: block;
+
+      &:first-of-type {
+        color: rgba(26, 26, 26, 0.5);
+      }
+
+      &:last-of-type {
+        @include font-size(24, 28);
+
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__wallet-direction {
+    @include flex-all-center;
+
+    padding: 20px 15px;
+  }
+
+  &__wallet-item {
+    @include flex-all-center;
+
+    border-radius: var(--radius-main);
+    width: 100%;
+    height: 45px;
+    max-width: 45px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--up {
+      background-color: rgba(125, 207, 202, 0.4);
+    }
+
+    &--down {
+      background-color: var(--color-red-100);
+      transform: rotate(180deg);
+    }
+  }
+
+  &__wallet-image {
+    width: 100%;
+    height: 21px;
+    max-width: 15px;
+  }
+
+  &__btns {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 35px;
+      top: 50%;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &--account {
+      &::before {
+        background-image: url("../icons/user-white.svg");
+      }
+    }
+
+    &--deposit {
+      &::before {
+        background-image: url("../icons/make-deposit.svg");
+      }
+    }
+
+    &--withdraw {
+      &::before {
+        background-image: url("../icons/withdraw-white.svg");
+      }
+    }
+  }
+
+  &__btn-link {
+    padding-left: 10px;
+
+    span {
+      display: block;
+      transform: translateX(12px);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: rem(36);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(34);
+    }
+
+    &--squere {
+      &::before {
+        background-image: url("../icons/squere.svg");
+      }
+    }
+
+    &--book {
+      &::before {
+        background-image: url("../icons/book.svg");
+      }
+    }
+
+    &--history {
+      &::before {
+        background-image: url("../icons/history.svg");
+      }
+    }
+
+    &--withdraw {
+      &::before {
+        background-image: url("../icons/withdraw.svg");
+      }
+    }
+
+    &--refferals {
+      &::before {
+        background-image: url("../icons/refferals.svg");
+      }
+    }
+
+    &--banner {
+      &::before {
+        background-image: url("../icons/banner.svg");
+      }
+    }
+
+    &--settings {
+      &::before {
+        background-image: url("../icons/settings.svg");
+      }
+    }
+
+    &--shield {
+      &::before {
+        background-image: url("../icons/shield.svg");
+      }
+    }
+
+    &--logout {
+      &::before {
+        background-image: url("../icons/logout.svg");
+      }
+    }
+  }
+
+  &__link {
+    @include font-size(17, 20);
+
+    position: relative;
+    display: block;
+    letter-spacing: -0.008em;
+
+    &--active {
+      @include font-size(18, 21);
+      @include color-gradient;
+
+      font-weight: 900;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: rem(-32);
+        top: 0;
+        border-radius: 100px;
+        width: 6px;
+        height: 100%;
+        background: var(--color-gradient-main);
+
+        @include media(desktop) {
+          right: rem(-20);
+        }
+      }
+    }
+  }
+
+  @include media(desktop) {
+    padding: rem(20);
+  }
+}

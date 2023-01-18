@@ -1,0 +1,105 @@
+@use "../../utils/mixins"as*;
+@use "../../utils/functions/"as*;
+
+.referal {
+  border-radius: calc(var(--radius-main) * 2.5);
+  padding: 21px rem(30) 21px rem(25);
+  width: 100%;
+  background: var(--color-aside);
+
+  &__link {
+    @include flex-all-sb;
+
+    margin-bottom: 10px;
+    gap: 20px;
+
+    @include media(tablet-wide) {
+      display: block;
+    }
+  }
+
+  &__title {
+    @include media(tablet-wide) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__copy {
+    @include font-size(14, 16);
+    @include flex-v-center;
+
+    position: relative;
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    border-radius: var(--radius-main);
+    padding-right: 10px;
+    width: 100%;
+    max-width: 516px;
+  }
+
+  &__copy-link {
+    display: block;
+    padding: 16px 25px 16px 20px;
+    word-break: break-all;
+  }
+
+  &__number {
+    @include font-size(18, 21);
+
+    width: 100%;
+    max-width: 50px;
+    font-family: var(--font-family-secondary);
+    font-weight: 900;
+    text-align: left;
+  }
+
+  &__copy-btn {
+    position: relative;
+    width: 25px;
+    height: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      width: 22px;
+      height: 22px;
+      background-image: url("../icons/copy.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__tooltip {
+    right: -6px;
+    top: -18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      width: 9px;
+      height: 9px;
+      background-image: url("../icons/success-check.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 320px;
+  }
+}

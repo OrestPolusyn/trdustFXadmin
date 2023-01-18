@@ -1,0 +1,38 @@
+@use "../utils/mixins"as*;
+@use "../utils/functions/"as*;
+
+h1 {
+  text-align: center;
+}
+
+.title {
+  @include font-size(32, 38);
+
+  font-family: var(--font-family-secondary);
+  font-weight: 900;
+
+  @include media(desktop) {
+    @include font-size(25, 25);
+  }
+
+  span {
+    @include color-gradient;
+
+    display: inline-block;
+  }
+
+  &--secondary {
+    @include font-size(24, 28);
+
+    @include media(desktop) {
+      @include font-size(18, 21);
+    }
+  }
+
+  &--small {
+    @include font-size(18, 19);
+
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,77 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.form {
+  position: relative;
+  margin-bottom: rem(75);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: rem(-28);
+    bottom: rem(-35);
+    width: calc(100% + 28px * 2);
+    height: 1px;
+    background-color: var(--color-gray-50);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.15fr;
+    margin-bottom: 29px;
+    gap: 15px;
+
+    @include media(desktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(tablet-wide) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    counter-increment: form;
+
+    &--radios {
+      grid-area: 1/2/3/3;
+
+      .form__title {
+        max-width: 250px;
+      }
+
+      @include media(tablet-wide) {
+        grid-area: auto;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-top: 3px;
+    padding-left: 37px;
+
+    &::before {
+      @include font-size(12, 14);
+      @include flex-all-center;
+
+      content: counter(form);
+      position: absolute;
+      left: 0;
+      top: 11px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      color: var(--color-white);
+      background: var(--color-gradient-main);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn {
+    @include font-size(18, 26);
+
+    max-width: 255px;
+  }
+}

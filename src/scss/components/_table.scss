@@ -1,0 +1,113 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  th {
+    @include font-size(18, 21);
+
+    padding-bottom: 22px;
+    font-family: var(--font-family-secondary);
+    font-weight: 900;
+
+    &:first-child {
+      padding-left: rem(30);
+    }
+
+    &:last-child {
+      padding-right: rem(30);
+    }
+  }
+
+  td {
+    padding: 20px 0;
+    white-space: nowrap;
+    text-align: center;
+
+    &:first-child {
+      @include flex-all-center;
+
+      padding-left: 20px;
+    }
+
+    &:last-child {
+      padding-right: rem(30);
+    }
+  }
+
+  thead th {
+    &:first-child {
+      @include flex-all-center;
+
+      padding-left: 8px;
+    }
+  }
+
+  tbody {
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-ligth);
+
+    tr {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 1;
+        background: linear-gradient(270deg, rgba(218, 218, 218, 0) 0%, #dadada 47.4%, rgba(218, 218, 218, 0) 100%);
+      }
+
+      &:nth-child(even) {
+        background: var(--color-aside);
+      }
+    }
+  }
+
+  span {
+    font-weight: 900;
+  }
+
+  .no-result {
+    text-align: center;
+
+    td:first-child {
+      display: table-cell;
+      text-align: center;
+    }
+  }
+
+  &--left {
+    thead th {
+      width: 100%;
+
+      &:first-child {
+        justify-content: flex-start;
+        padding-left: 30px;
+        text-align: left;
+      }
+
+      &:last-child {
+        padding-right: 60px;
+      }
+    }
+
+    td {
+      &:first-child {
+        justify-content: flex-start;
+        padding-left: 30px;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "../../utils/mixins"as*;
+@use "../../utils/functions/"as*;
+
+.cryptomaker {
+  border-radius: var(--radius-main);
+  padding: 3px 20px 14px 18px;
+  box-shadow: var(--shadow-ligth);
+
+  &__main {
+    --rotate: 280deg;
+
+    @include flex-all-sb;
+
+    position: relative;
+    margin-bottom: rem(37);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      margin: 0 auto;
+      width: 100%;
+      height: 1;
+      background: linear-gradient(var(--rotate), rgba(218, 218, 218, 0) 0%, #dadada 47.4%, rgba(218, 218, 218, 0) 100%);
+    }
+  }
+
+  &__desc {
+    padding-top: 12px;
+    padding-right: 10px;
+  }
+
+  &__title {
+    @include font-size(16, 19);
+
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    &::before {
+      @include color-gradient;
+      @include font-size(18, 21);
+      @include flex-all-center;
+
+      content: attr(data-number);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 62px;
+      height: 62px;
+      font-family: var(--font-family-secondary);
+      font-weight: 900;
+      transform: translate(-50%, -40%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      width: 62px;
+      height: 62px;
+      background-color: #edf1f6;
+      transform: translate(-50%, -40%);
+    }
+  }
+}

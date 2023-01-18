@@ -1,0 +1,36 @@
+<form class="form" action="#">
+
+  <div class="form__grid">
+    <div class="form__item form__item--select">
+      <h2 class="form__title title title--small">
+        Choose investment option
+      </h2>
+
+      <include src="./html/components/_form-select.html"></include>
+
+    </div>
+
+    <div class="form__item form__item--radios">
+      <h2 class="form__title title title--small">
+        What currency do you want to invest with?
+      </h2>
+
+      <include src="./html/components/_radio-list.html"></include>
+    </div>
+
+    <div class="form__item form__item--amount">
+      <h2 class="form__title title title--small">
+        Enter amount of your investments
+      </h2>
+
+      <div class="form__item-range">
+        <include src="./html/components/_range.html"></include>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="form__btn btn" type="submit">
+    Send
+  </button>
+</form>

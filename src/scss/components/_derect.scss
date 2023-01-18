@@ -1,0 +1,20 @@
+@use "../utils/mixins"as*;
+@use "../utils/functions/"as*;
+
+.derect {
+  border-radius: calc(var(--radius-main) * 2.5);
+  padding: 36px;
+  background: var(--color-gradient-gray);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+    gap: 40px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    letter-spacing: -0.03em;
+  }
+}
