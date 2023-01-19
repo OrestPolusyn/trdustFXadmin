@@ -8,9 +8,13 @@
 
   &__form {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     margin-bottom: rem(36);
     gap: rem(30);
+
+    @include media(desktop-wide, min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__fieldset {

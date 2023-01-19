@@ -266,4 +266,8 @@ $selectric-font-size: 12px !default; // Font size
   padding: 15px 15px;
   width: 100%;
   max-width: 503px;
+
+  @include media(tablet-wide) {
+    max-width: none;
+  }
 }

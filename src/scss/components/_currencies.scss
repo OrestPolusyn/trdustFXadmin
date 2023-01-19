@@ -46,4 +46,8 @@
   @include media(desktop) {
     padding: rem(20);
   }
+
+  @include media(tablet) {
+    max-width: none;
+  }
 }

@@ -7,12 +7,20 @@
 
     margin-top: -3px;
     margin-bottom: rem(33);
+
+    @include media(mobile-s) {
+      justify-content: space-between;
+    }
   }
 
   &__title {
     @include font-size(24, 24);
 
     margin-right: 18px;
+
+    @include media(mobile-s) {
+      @include font-size(16, 19);
+    }
   }
 
   &__link {

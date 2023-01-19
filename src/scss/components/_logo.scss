@@ -1,5 +1,11 @@
+@use "../utils/functions/"as*;
+
 .logo {
   margin-bottom: 23px;
   width: 100%;
   max-width: 160px;
+
+  @include media(mobile-l) {
+    margin-bottom: 0;
+  }
 }

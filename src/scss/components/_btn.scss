@@ -44,4 +44,8 @@
       visibility: visible;
     }
   }
+
+  @include media(mobile-s) {
+    margin: 0 auto;
+  }
 }

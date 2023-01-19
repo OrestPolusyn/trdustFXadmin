@@ -5,7 +5,11 @@
   margin-bottom: 40px;
 
   &__inner {
-    @include flex-sb;
+    @include flex;
+
+    @include media(tablet-wide) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -16,19 +20,35 @@
     @include flex-all-center;
 
     align-items: baseline;
+    margin-right: 20px;
     border-radius: calc(var(--radius-main) * 2.5);
     padding: 20px 10px;
-    width: 100%;
+    min-width: 195px;
     height: fit-content;
-    max-width: 195px;
     background: var(--color-gradient-gray);
+
+    @include media(tablet-wide) {
+      margin-bottom: 30px;
+    }
   }
 
   &__cells {
     display: grid;
-    grid-template-columns: repeat(6, 75px);
+    grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
     margin-bottom: 30px;
     gap: 15px;
+
+    @include media(desktop) {
+      grid-template-columns: repeat(3, minmax(62px, 1fr));
+    }
+
+    @include media(tablet) {
+      grid-template-columns: repeat(6, minmax(62px, 1fr));
+    }
+
+    @include media(mobile-s) {
+      grid-template-columns: repeat(3, minmax(62px, 1fr));
+    }
   }
 
   &__cell {

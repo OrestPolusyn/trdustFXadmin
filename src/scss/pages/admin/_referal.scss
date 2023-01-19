@@ -50,6 +50,10 @@
     display: block;
     padding: 16px 25px 16px 20px;
     word-break: break-all;
+
+    @include media(tablet) {
+      padding: 10px;
+    }
   }
 
   &__number {
@@ -101,5 +105,9 @@
   &__list {
     width: 100%;
     max-width: 320px;
+  }
+
+  @include media(tablet) {
+    padding: 15px 10px;
   }
 }

@@ -2,7 +2,6 @@
 @use "../utils/mixins"as*;
 
 .page {
-  overflow: hidden;
   height: 100%;
   font-family: var(--font-family-primary);
   font-weight: 400;
@@ -17,6 +16,26 @@
   &__body {
     min-width: 320px;
     min-height: 100%;
+  }
+
+  &--menu {
+    overflow: hidden;
+
+    .burger {
+      transform: rotateY(180deg) translateY(-50%);
+
+      &::before {
+        background-image: url("../icons/burger-close.svg");
+      }
+
+      &__close {
+        opacity: 1;
+      }
+    }
+
+    .navigation__inner {
+      left: 0;
+    }
   }
 
   @include media(mobile-m) {
@@ -42,5 +61,10 @@
 
   .btn {
     @include font-size(18, 22);
+  }
+
+  @include media(mobile-l) {
+    flex-direction: column;
+    height: auto;
   }
 }

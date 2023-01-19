@@ -2,14 +2,23 @@
 @use "../utils/functions/"as*;
 
 .currency {
+  position: relative;
   border-radius: calc(var(--radius-main) * 2.5);
   padding: rem(35) rem(38);
   background: var(--color-gradient-gray);
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     gap: 23px rem(40);
+
+    @include media(tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    @include media(mobile-s) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -64,5 +73,9 @@
     padding: 20px 16px;
     width: 100%;
     text-transform: uppercase;
+  }
+
+  @include media(mobile-s) {
+    padding: 25px 15px;
   }
 }

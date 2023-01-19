@@ -3,19 +3,27 @@
 
 .form-history {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
   padding-bottom: 26px;
-  gap: rem(45) 10px;
+  gap: 10px;
 
   &__box {
     display: grid;
     align-items: center;
     justify-content: start;
-    grid-template-columns: 45px repeat(3, 100px);
+    grid-template-columns: 45px repeat(3, 80px);
     gap: 15px;
 
     span {
       text-transform: capitalize;
+    }
+
+    @include media(desktop) {
+      grid-template-columns: 55px repeat(3, 1fr);
+    }
+
+    @include media(mobile-m) {
+      grid-template-columns: 35px repeat(3, 1fr);
     }
   }
 
@@ -33,5 +41,9 @@
     &::before {
       bottom: 0;
     }
+  }
+
+  @include media(mobile-m) {
+    grid-template-columns: 1fr;
   }
 }

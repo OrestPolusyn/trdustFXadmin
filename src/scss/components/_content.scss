@@ -14,6 +14,17 @@
     padding: 25px rem(42) 25px 27px;
     width: calc(100% - 260px);
     background-color: var(--color-white);
+
+    @include media(tablet) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    @include media(mobile-l) {
+      position: relative;
+      padding: 10px;
+      width: 100%;
+    }
   }
 
   &__date {
@@ -25,7 +36,37 @@
     span {
       &:not(:last-child) {
         margin-right: rem(30);
+
+        @include media(tablet-wide) {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+
+        @include media(tablet) {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
       }
+    }
+
+    @include media(tablet-wide) {
+      @include flex;
+
+      flex-direction: column;
+    }
+
+    @include media(tablet) {
+      flex-direction: row;
+    }
+
+    @include media(mobile-l) {
+      @include font-size(17, 19);
+    }
+  }
+
+  &__title {
+    @include media(tablet) {
+      margin-bottom: 20px;
     }
   }
 
@@ -34,9 +75,19 @@
 
     padding-top: var(--wellcome-height);
     height: 100%;
+
+    @include media(tablet) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    @include media(mobile-l) {
+      padding-top: 20px;
+    }
   }
 
   &__main {
+    overflow-x: clip;
     overflow-y: auto;
     padding: rem(33) rem(28);
     width: 100%;
@@ -53,6 +104,24 @@
 
     &--cryptomaker {
       margin-bottom: rem(42);
+
+      .cryptomaker:last-child {
+        @include media(tablet-wide) {
+          grid-column: 1 / span 2;
+        }
+
+        @include media(mobile-s) {
+          grid-column: auto;
+        }
+      }
+
+      @include media(tablet-wide) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(mobile-s) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -67,7 +136,11 @@
       }
 
       &__grid {
-        grid-template-columns: 1fr 1.6fr;
+        grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+
+        @include media(desktop-s) {
+          bottom: -15px;
+        }
       }
 
       &__item {
@@ -82,6 +155,10 @@
     .content {
       &__main {
         padding: 19px rem(28);
+
+        @include media(tablet-wide) {
+          padding: rem(20);
+        }
       }
     }
   }

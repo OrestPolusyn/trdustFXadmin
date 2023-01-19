@@ -65,4 +65,9 @@
       }
     }
   }
+
+  @include media(tablet-wide) {
+    width: auto;
+    max-width: none;
+  }
 }

@@ -3,11 +3,12 @@ const progressText = document.querySelector('.range__text');
 
 const rangeFill = () => {
   const value = progressDrag.value;
-
   progressDrag.style.setProperty('--percent', `${value}%`);
 };
 
-progressDrag.addEventListener('input', rangeFill);
-progressText.addEventListener('input', rangeFill);
+if (progressDrag || progressText) {
+  progressDrag.addEventListener('input', rangeFill);
+  progressText.addEventListener('input', rangeFill);
 
-rangeFill();
+  rangeFill();
+}

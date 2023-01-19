@@ -19,6 +19,14 @@
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     margin-bottom: rem(43);
     gap: rem(30) rem(26);
+
+    @include media(tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    }
+
+    @include media(mobile-s) {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
   }
 
   &__radio {
@@ -61,6 +69,12 @@
     &:hover {
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
     }
+
+    @include media(mobile-s) {
+      padding: 15px;
+      height: 64px;
+      min-height: auto;
+    }
   }
 
   &__item {
@@ -73,12 +87,21 @@
     &--paycore {
       .money__image {
         margin-bottom: 15px;
+
+        @include media(mobile-s) {
+          margin-top: auto;
+          margin-bottom: 10px;
+        }
       }
     }
 
     &--tether {
       .money__image {
         max-width: 145px;
+
+        @include media(mobile-s) {
+          max-width: 75px;
+        }
       }
     }
   }
@@ -87,6 +110,10 @@
     margin-bottom: 5px;
     width: 100%;
     max-width: 170px;
+
+    @include media(mobile-s) {
+      max-width: 75px;
+    }
   }
 
   &__form {
@@ -111,6 +138,11 @@
 
     &::placeholder {
       color: var(--color-dark-400);
+    }
+
+    @include media(mobile-s) {
+      width: 100%;
+      max-width: none;
     }
   }
 

@@ -11,10 +11,19 @@
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
     gap: 40px;
+
+    @include media(mobile-s) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   &__title {
     margin-bottom: 35px;
     letter-spacing: -0.03em;
+  }
+
+  @include media(mobile-l) {
+    padding: 20px;
   }
 }

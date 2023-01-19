@@ -4,104 +4,110 @@
     <img class="logo__image" src="./images/logo.svg" alt="Trust FX logo" height="37" width="160" loading="lazy">
   </div>
 
-  <div class="navigation__wallet">
-    <div class="navigation__wallet-number">
-      <span>
-        Saved money
-      </span>
+  <div class="navigation__inner">
+    <div class="navigation__wallet">
+      <div class="navigation__wallet-number">
+        <span>
+          Saved money
+        </span>
 
-      <span class="text-gradient">
-        $56.874
-      </span>
+        <span class="text-gradient">
+          $56.874
+        </span>
+      </div>
+
+      <ul class="navigation__wallet-direction">
+        <li class="navigation__wallet-item navigation__wallet-item--up">
+          <img class="navigation__wallet-image" src="./icons/arrow.svg" width="15" height="20" alt="Arrow"
+            loading="lazy">
+        </li>
+
+        <li class="navigation__wallet-item navigation__wallet-item--down">
+          <img class="navigation__wallet-image" src="./icons/arrow.svg" width="15" height="20" alt="Arrow"
+            loading="lazy">
+        </li>
+      </ul>
     </div>
 
-    <ul class="navigation__wallet-direction">
-      <li class="navigation__wallet-item navigation__wallet-item--up">
-        <img class="navigation__wallet-image" src="./icons/arrow.svg" width="15" height="20" alt="Arrow" loading="lazy">
-      </li>
+    <nav class="navigation__menu">
+      <ul class="navigation__btns">
+        <li class="navigation__btn navigation__btn--active navigation__btn--account">
+          <a class="navigation__btn-link btn" href="#">
+            <span>Your account</span>
+          </a>
+        </li>
 
-      <li class="navigation__wallet-item navigation__wallet-item--down">
-        <img class="navigation__wallet-image" src="./icons/arrow.svg" width="15" height="20" alt="Arrow" loading="lazy">
-      </li>
-    </ul>
+        <li class="navigation__btn navigation__btn--deposit">
+          <a class="navigation__btn-link btn" href="#">
+            <span>Make deposit</span>
+          </a>
+        </li>
+
+        <li class="navigation__btn navigation__btn--withdraw">
+          <a class="navigation__btn-link btn" href="#">
+            <span>Withdraw</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__item--squere">
+          <a class="navigation__link navigation__link--active" href="#">
+            Your deposits
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--book">
+          <a class="navigation__link" href="#">
+            Deposits history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--history">
+          <a class="navigation__link" href="#">
+            Earning history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--withdraw">
+          <a class="navigation__link" href="#">
+            Withdrawals history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--refferals">
+          <a class="navigation__link" href="#">
+            Your refferrals
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--banner">
+          <a class="navigation__link" href="#">
+            Affilliate baners
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--settings">
+          <a class="navigation__link" href="#">
+            Edit account
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--shield">
+          <a class="navigation__link" href="#">
+            Security
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--logout">
+          <a class="navigation__link" href="#">
+            Log Out
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <nav class="navigation__menu">
-
-    <ul class="navigation__btns">
-      <li class="navigation__btn navigation__btn--active navigation__btn--account">
-        <a class="navigation__btn-link btn" href="#">
-          <span>Your account</span>
-        </a>
-      </li>
-
-      <li class="navigation__btn navigation__btn--deposit">
-        <a class="navigation__btn-link btn" href="#">
-          <span>Make deposit</span>
-        </a>
-      </li>
-
-      <li class="navigation__btn navigation__btn--withdraw">
-        <a class="navigation__btn-link btn" href="#">
-          <span>Withdraw</span>
-        </a>
-      </li>
-    </ul>
-
-    <ul class="navigation__list">
-      <li class="navigation__item navigation__item--squere">
-        <a class="navigation__link navigation__link--active" href="#">
-          Your deposits
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--book">
-        <a class="navigation__link" href="#">
-          Deposits history
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--history">
-        <a class="navigation__link" href="#">
-          Earning history
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--withdraw">
-        <a class="navigation__link" href="#">
-          Withdrawals history
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--refferals">
-        <a class="navigation__link" href="#">
-          Your refferrals
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--banner">
-        <a class="navigation__link" href="#">
-          Affilliate baners
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--settings">
-        <a class="navigation__link" href="#">
-          Edit account
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--shield">
-        <a class="navigation__link" href="#">
-          Security
-        </a>
-      </li>
-
-      <li class="navigation__item navigation__item--logout">
-        <a class="navigation__link" href="#">
-          Log Out
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <button class="burger" data-burger type="button">
+  </button>
 </aside>

@@ -19,6 +19,10 @@
       width: 100%;
       height: 1px;
       background-color: var(--color-gray-50);
+
+      @include media(tablet-wide) {
+        display: none;
+      }
     }
 
     &::after {
@@ -36,12 +40,22 @@
     >* {
       display: block;
     }
+
+    @include media(tablet-wide) {
+      padding-bottom: 0;
+      max-width: none;
+    }
   }
 
   &__image {
     margin-top: 4px;
     margin-bottom: rem(27);
     margin-left: 8px;
+
+    @include media(tablet-wide) {
+      float: left;
+      margin-right: 17px;
+    }
   }
 
   &__number {
@@ -54,6 +68,14 @@
   &__desc {
     @include font-size(14, 16);
 
+    display: flex;
     opacity: 0.5;
+  }
+
+  @include media(tablet-wide) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }

@@ -13,6 +13,10 @@
     width: calc(100% + 28px * 2);
     height: 1px;
     background-color: var(--color-gray-50);
+
+    @include media(mobile-s) {
+      bottom: -15px;
+    }
   }
 
   &__grid {
@@ -20,6 +24,10 @@
     grid-template-columns: 1.5fr 1.15fr;
     margin-bottom: 29px;
     gap: 15px;
+
+    @include media(desktop-l, min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include media(desktop) {
       grid-template-columns: 1fr 1fr;
@@ -73,5 +81,9 @@
     @include font-size(18, 26);
 
     max-width: 255px;
+  }
+
+  @include media(mobile-s) {
+    margin-bottom: 30px;
   }
 }

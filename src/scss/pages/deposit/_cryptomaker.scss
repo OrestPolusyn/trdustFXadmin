@@ -9,9 +9,10 @@
   &__main {
     --rotate: 280deg;
 
-    @include flex-all-sb;
+    @include flex-all-center;
 
     position: relative;
+    flex-wrap: wrap;
     margin-bottom: rem(37);
 
     &::after {
@@ -49,6 +50,8 @@
 
   &__icon {
     position: relative;
+    margin-right: 10px;
+    min-width: 85px;
 
     &::before {
       @include color-gradient;
@@ -78,5 +81,9 @@
       background-color: #edf1f6;
       transform: translate(-50%, -40%);
     }
+  }
+
+  @include media(tablet-wide) {
+    padding: 5px 10px;
   }
 }

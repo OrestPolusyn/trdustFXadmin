@@ -27,6 +27,10 @@ h1 {
     @include media(desktop) {
       @include font-size(18, 21);
     }
+
+    @include media(mobile-s) {
+      @include font-size(16, 19);
+    }
   }
 
   &--small {
