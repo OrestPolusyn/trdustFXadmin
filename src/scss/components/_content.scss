@@ -86,8 +86,8 @@
     }
   }
 
-  &__main {
-    overflow-x: clip;
+  &__main.scroll {
+    overflow-x: hidden;
     overflow-y: auto;
     padding: rem(33) rem(28);
     width: 100%;
