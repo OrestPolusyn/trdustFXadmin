@@ -61,6 +61,8 @@
 
   .btn {
     @include font-size(18, 22);
+
+    padding: 14px 10px;
   }
 
   @include media(mobile-l) {

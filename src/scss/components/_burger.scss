@@ -41,7 +41,7 @@
     transition: opacity 0.2s;
   }
 
-  @include media(tablet) {
+  @include media(mobile-l) {
     display: block;
   }
 }

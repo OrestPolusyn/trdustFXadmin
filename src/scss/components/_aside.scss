@@ -2,13 +2,14 @@
 @use "../utils/mixins/"as*;
 
 .navigation {
-  overflow-y: auto;
   position: sticky;
   top: 0;
-  padding: rem(31) rem(32);
+  overflow-y: auto;
+  padding: rem(31) rem(30) rem(31) rem(32);
   width: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
   max-width: 260px;
   background: var(--color-aside);
 
@@ -27,17 +28,17 @@
   }
 
   &__menu {
+    .btn {
+      @include media(mobile-l) {
+        max-width: none;
+      }
+    }
+
     @include media(mobile-l) {
       margin: 0 auto;
       margin-bottom: 40px;
       width: 100%;
       max-width: 290px;
-    }
-
-    .btn {
-      @include media(mobile-l) {
-        max-width: none;
-      }
     }
   }
 
@@ -86,13 +87,34 @@
   &__wallet-item {
     @include flex-all-center;
 
-    border-radius: var(--radius-main);
     width: 100%;
     height: 45px;
     max-width: 45px;
 
     &:not(:last-child) {
       margin-right: 15px;
+    }
+  }
+
+  &__wallet-link {
+    position: relative;
+    display: block;
+    border-radius: var(--radius-main);
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 15px;
+      height: 21px;
+      background-image: url("../icons/arrow.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
     }
 
     &--up {
@@ -117,11 +139,17 @@
 
   &__btn {
     position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__btn-link {
+    position: relative;
+    padding-left: 10px;
 
     &::before {
       content: "";
       position: absolute;
-      left: 35px;
+      left: 20px;
       top: 50%;
       z-index: 1;
       width: 20px;
@@ -130,10 +158,15 @@
       background-size: contain;
       background-repeat: no-repeat;
       transform: translateY(-50%);
+
+      @include media(mobile-l) {
+        left: 20%;
+      }
     }
 
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    span {
+      display: block;
+      transform: translateX(8px);
     }
 
     &--account {
@@ -155,15 +188,6 @@
     }
   }
 
-  &__btn-link {
-    padding-left: 10px;
-
-    span {
-      display: block;
-      transform: translateX(12px);
-    }
-  }
-
   &__item {
     position: relative;
     padding-left: rem(36);
@@ -182,7 +206,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: rem(34);
+      margin-bottom: rem(38);
     }
 
     &--squere {
@@ -246,17 +270,25 @@
     position: relative;
     display: block;
     letter-spacing: -0.008em;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      @include color-gradient;
+
+      font-weight: 500;
+    }
 
     &--active {
       @include font-size(18, 21);
       @include color-gradient;
 
-      font-weight: 900;
+      font-weight: 700;
 
       &::after {
         content: "";
         position: absolute;
-        right: rem(-32);
+        right: rem(-30);
         top: 0;
         border-radius: 100px;
         width: 6px;
@@ -287,4 +319,8 @@
     max-width: none;
     background-color: var(--color-gray-50);
   }
+}
+
+.munition__columns {
+  grid-template-columns: minmax(620px, 3fr) minmax(200px, 1fr) minmax(285px, 1.4fr) minmax(205px, 1.4fr);
 }

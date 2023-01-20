@@ -13,6 +13,7 @@
 
     position: relative;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: rem(37);
 
     &::after {
@@ -30,7 +31,7 @@
 
   &__desc {
     padding-top: 12px;
-    padding-right: 10px;
+    padding-right: 8px;
   }
 
   &__title {
