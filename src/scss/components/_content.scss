@@ -71,8 +71,12 @@
     @include media(mobile-s) {
       @include font-size(12, 14);
 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
       padding-left: 10px;
       width: 100%;
+      max-width: 300px;
     }
   }
 

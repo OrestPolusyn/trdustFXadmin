@@ -163,10 +163,6 @@
         background-size: contain;
         background-repeat: no-repeat;
         transform: translateY(-50%);
-
-        @include media(mobile-l) {
-          // left: 20%;
-        }
       }
     }
 
@@ -262,6 +258,11 @@
       &::before {
         background-image: url("../icons/logout.svg");
       }
+    }
+
+    @include media(mobile-l) {
+      padding-left: 40px;
+      width: fit-content;
     }
   }
 
