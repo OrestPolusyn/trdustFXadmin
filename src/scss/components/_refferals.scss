@@ -13,6 +13,10 @@
     border-radius: calc(var(--radius-main) * 2.5);
     background: var(--color-aside);
 
+    @include media(desktop-wide, min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include media(desktop) {
       justify-content: center;
     }
