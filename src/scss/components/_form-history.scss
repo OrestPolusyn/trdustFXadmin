@@ -3,15 +3,16 @@
 
 .form-history {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
   padding-bottom: 26px;
-  gap: 10px;
+  gap: 10px 30px;
 
   &__box {
     display: grid;
     align-items: center;
     justify-content: start;
-    grid-template-columns: 45px repeat(3, 80px);
+    grid-template-columns: 45px repeat(3, minmax(80px, 1fr));
     gap: 15px;
 
     span {
@@ -43,7 +44,7 @@
     }
   }
 
-  @include media(mobile-m) {
+  @include media(desktop) {
     grid-template-columns: 1fr;
   }
 }

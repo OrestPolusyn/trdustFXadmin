@@ -47,6 +47,11 @@
           margin-bottom: 0;
         }
       }
+
+      @include media(mobile-m) {
+        display: block;
+        justify-content: flex-start;
+      }
     }
 
     @include media(tablet-wide) {
@@ -62,11 +67,22 @@
     @include media(mobile-l) {
       @include font-size(17, 19);
     }
+
+    @include media(mobile-s) {
+      @include font-size(12, 14);
+
+      padding-left: 10px;
+      width: 100%;
+    }
   }
 
   &__title {
     @include media(tablet) {
       margin-bottom: 20px;
+    }
+
+    @include media(mobile-m) {
+      @include font-size(20, 23);
     }
   }
 
@@ -136,7 +152,12 @@
       }
 
       &__grid {
-        grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+        grid-template-columns: 320px 1fr;
+        gap: 15px 40px;
+
+        .range {
+          max-width: none;
+        }
 
         @include media(desktop-s) {
           bottom: -15px;

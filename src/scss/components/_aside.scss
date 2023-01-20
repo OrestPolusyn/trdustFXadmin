@@ -9,7 +9,6 @@
   width: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  width: 100%;
   max-width: 260px;
   background: var(--color-aside);
 
@@ -143,45 +142,47 @@
   }
 
   &__btn-link {
-    position: relative;
     padding-left: 10px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      z-index: 1;
-      width: 20px;
-      height: 20px;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: translateY(-50%);
+    span {
+      position: relative;
+      display: block;
+      transform: translateX(8px);
+      margin: 0 auto;
+      width: fit-content;
 
-      @include media(mobile-l) {
-        left: 20%;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+
+        @include media(mobile-l) {
+          // left: 20%;
+        }
       }
     }
 
-    span {
-      display: block;
-      transform: translateX(8px);
-    }
-
-    &--account {
+    &--account span {
       &::before {
         background-image: url("../icons/user-white.svg");
       }
     }
 
-    &--deposit {
+    &--deposit span {
       &::before {
         background-image: url("../icons/make-deposit.svg");
       }
     }
 
-    &--withdraw {
+    &--withdraw span {
       &::before {
         background-image: url("../icons/withdraw-white.svg");
       }
@@ -190,7 +191,7 @@
 
   &__item {
     position: relative;
-    padding-left: rem(36);
+    padding-left: rem(30);
 
     &::before {
       content: "";
@@ -271,12 +272,18 @@
     display: block;
     letter-spacing: -0.008em;
     white-space: nowrap;
+    background-clip: text;
+    background: var(--color-dark-400);
+    -webkit-background-clip: text;
+    font-weight: 600;
 
     &:hover,
     &:focus {
       @include color-gradient;
 
-      font-weight: 500;
+      font-family: var(--font-family-primary);
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
     }
 
     &--active {
@@ -288,7 +295,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: rem(-30);
+        right: rem(-27);
         top: 0;
         border-radius: 100px;
         width: 6px;

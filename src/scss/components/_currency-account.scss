@@ -10,13 +10,19 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 23px rem(40);
+    margin-bottom: 30px;
+    gap: 23px 40px;
 
     @include media(tablet) {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
-    @include media(mobile-s) {
+    @include media(mobile-l) {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    @include media(mobile-m) {
       grid-template-columns: 1fr;
     }
   }
@@ -63,6 +69,10 @@
         max-width: 30px;
       }
     }
+
+    @include media(mobile-m) {
+      max-width: none;
+    }
   }
 
   &__code {
@@ -77,10 +87,12 @@
     display: block;
     border-radius: var(--radius-main);
     padding: 20px 16px;
+    width: 100%;
     text-transform: uppercase;
   }
 
-  @include media(mobile-s) {
+  @include media(mobile-l) {
     padding: 25px 15px;
+    background: linear-gradient(0deg, rgba(245, 247, 250, 0.3) -49.83%, rgba(195, 207, 226, 0.3) 100%);
   }
 }

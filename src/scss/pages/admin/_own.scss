@@ -80,4 +80,16 @@
       background-color: var(--color-white);
     }
   }
+
+  .table {
+    &__title {
+      &--first {
+        padding-left: 50px;
+
+        @include media(tablet-wide) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
 }

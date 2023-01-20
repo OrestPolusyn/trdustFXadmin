@@ -28,6 +28,7 @@
     background: var(--color-gradient-gray);
 
     @include media(tablet-wide) {
+      margin-right: 0;
       margin-bottom: 30px;
     }
   }

@@ -1,6 +1,6 @@
 import { _querySelector } from '../_config.js';
 import { toggleClassItem } from '../functions/_toggleClassItem.js';
-console.log('sdsd');
+
 document[_querySelector]('.burger')?.addEventListener('click', e => {
   if (!e.target.matches('.burger')) return;
   toggleClassItem('.page', 'page--menu');
