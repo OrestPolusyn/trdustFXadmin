@@ -163,7 +163,16 @@
           max-width: none;
         }
 
-        @include media(desktop-s) {
+        @include media(desktop) {
+          gap: 15px;
+        }
+
+        @include media(tablet-wide) {
+          grid-template-columns: 1fr;
+          gap: 30px 15px;
+        }
+
+        @include media(mobile-s) {
           bottom: -15px;
         }
       }

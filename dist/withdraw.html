@@ -1,1 +1,471 @@
-<!DOCTYPE html><html lang="en" class="page scroll"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon shortcut" href="favicon.8f427cf5.png" type="image/x-icon"><title>Trust=&gt;FX | Withdraw money page</title><link rel="stylesheet" href="account.eb3ad63f.css"><link rel="stylesheet" href="account.dcd412b5.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/selectric@1.13.0/public/jquery.selectric.min.js" defer></script><script src="account.0389faa4.js" type="module"></script><script src="account.17781d8c.js" nomodule defer></script></head><body class="page__body"> <div class="site-container"> <main class="main"> <aside class="navigation scroll"> <div class="logo"> <img class="logo__image" src="images/logo.59d0e274.svg" alt="Trust FX logo" height="37" width="160" loading="lazy"> </div> <div class="navigation__inner"> <div class="navigation__wallet"> <div class="navigation__wallet-number"> <span> Saved money </span> <span class="text-gradient"> $56.874 </span> </div> <ul class="navigation__wallet-direction"> <li class="navigation__wallet-item"> <a class="navigation__wallet-link navigation__wallet-link--up" href="#" aria-label="Up trade"> </a> </li> <li class="navigation__wallet-item"> <a class="navigation__wallet-link navigation__wallet-link--down" href="#" aria-label="Up trade"> </a> </li> </ul> </div> <nav class="navigation__menu"> <ul class="navigation__btns"> <li class="navigation__btn navigation__btn--active"> <a class="btn navigation__btn-link navigation__btn-link--account" href="#"> <span>Your account</span> </a> </li> <li class="navigation__btn"> <a class="btn navigation__btn-link navigation__btn-link--deposit" href="#"> <span>Make deposit</span> </a> </li> <li class="navigation__btn"> <a class="btn navigation__btn-link navigation__btn-link--withdraw" href="#"> <span>Withdraw</span> </a> </li> </ul> <ul class="navigation__list"> <li class="navigation__item navigation__item--squere"> <a class="navigation__link navigation__link--active" href="#"> Your deposits </a> </li> <li class="navigation__item navigation__item--book"> <a class="navigation__link" href="#"> Deposits history </a> </li> <li class="navigation__item navigation__item--history"> <a class="navigation__link" href="#"> Earning history </a> </li> <li class="navigation__item navigation__item--withdraw"> <a class="navigation__link" href="#"> Withdrawals history </a> </li> <li class="navigation__item navigation__item--refferals"> <a class="navigation__link" href="#"> Your refferrals </a> </li> <li class="navigation__item navigation__item--banner"> <a class="navigation__link" href="#"> Affilliate baners </a> </li> <li class="navigation__item navigation__item--settings"> <a class="navigation__link" href="#"> Edit account </a> </li> <li class="navigation__item navigation__item--shield"> <a class="navigation__link" href="#"> Security </a> </li> <li class="navigation__item navigation__item--logout"> <a class="navigation__link" href="#"> Log Out </a> </li> </ul> </nav> </div> <button class="burger" data-burger type="button"> </button> </aside> <section class="content"> <div class="content__wellcome"> <h1 class="content__title title"> Welcome Back, <span>Dimas Dirga!</span> </h1> <div class="content__date"> <span> Registration date: <span>Oct 20 2022</span> </span> <span> Last access: <span>Oct 20 2022</span> </span> </div> </div> <div class="content__inner"> <div class="content__main scroll"> <div class="money"> <h2 class="money__title title title--secondary"> Withdraw money </h2> <h3 class="money__subtitle title title--small"> Select eCurrency </h3> <ul class="money__list"> <li class="money__item money__item--paycore"> <input class="sr-only" type="radio" name="withdraw" id="core" checked> <label class="money__radio" for="core"> <span class="money__radio-content"> <img class="money__image" src="images/logos/pay-core.dbbbc2c3.svg" width="210" height="35" alt="Pay core logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> <li class="money__item"> <input class="sr-only" type="radio" name="withdraw" id="dogecoin"> <label class="money__radio" for="dogecoin"> <span class="money__radio-content"> <img class="money__image" src="images/logos/dogecoin-logo.9dc70050.png" width="210" height="35" alt="Dogecoin logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> <li class="money__item"> <input class="sr-only" type="radio" name="withdraw" id="ripple"> <label class="money__radio" for="ripple"> <span class="money__radio-content"> <img class="money__image" src="images/logos/ripple-logo.a6c8a920.png" width="210" height="35" alt="Ripple logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> <li class="money__item"> <input class="sr-only" type="radio" name="withdraw" id="ton"> <label class="money__radio" for="ton"> <span class="money__radio-content"> <img class="money__image" src="images/logos/ton-logo.95a43248.png" width="210" height="35" alt="Ton logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> <li class="money__item"> <input class="sr-only" type="radio" name="withdraw" id="tron"> <label class="money__radio" for="tron"> <span class="money__radio-content"> <img class="money__image" src="images/logos/tron.02ddcd58.png" width="210" height="35" alt="Tron logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> <li class="money__item money__item--tether"> <input class="sr-only" type="radio" name="withdraw" id="tether"> <label class="money__radio" for="tether"> <span class="money__radio-content"> <img class="money__image" src="images/logos/trc-20.e2b3880d.svg" width="210" height="35" alt="Tether logo" loading="lazy"> <span class="text-gradient"> 200.00 </span> </span> <span> min: 5.00 </span> </label> </li> </ul> <form class="money__form" action="#"> <h3 class="money__subtitle title title--small"> Withdraw </h3> <input class="money__withdraw" type="number" placeholder="0.1000000" step="0.0000001"> <button class="btn money__form-btn" type="submit"> Request </button> </form> </div> </div> <div class="currencies scroll"> <h2 class="currencies__title title title--secondary"> We accept </h2> <ul class="currencies__list"> <li class="currencies__item"> <img class="currencies__image" src="icons/tether-usdt-trc20.be2e42eb.svg" width="48" height="42" alt="Tether" loading="lazy"> <span class="currencies__name"> Tether trc 20 </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/tether-usdt-ether.bd4ae69f.svg" width="48" height="42" alt="Tether" loading="lazy"> <span class="currencies__name"> Tether erc 20 </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/busd.c8fb7b4d.svg" width="48" height="42" alt="BUSD" loading="lazy"> <span class="currencies__name"> BUSD </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/usdc.c5cce783.svg" width="48" height="42" alt="USDC" loading="lazy"> <span class="currencies__name"> USDC </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/tron.2e69cf29.svg" width="48" height="42" alt="TRON" loading="lazy"> <span class="currencies__name"> Tron </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/bitcoin.f5b5482b.svg" width="48" height="42" alt="Bitcoin" loading="lazy"> <span class="currencies__name"> Bitcoin </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/etherum.6d58730b.svg" width="48" height="42" alt="Ethereum" loading="lazy"> <span class="currencies__name"> Ethereum </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/bnb.dd18f7de.svg" width="48" height="42" alt="BNB" loading="lazy"> <span class="currencies__name"> BNB </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/ripple.c177609f.svg" width="48" height="42" alt="Ripple" loading="lazy"> <span class="currencies__name"> Ripple </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/lightcoin.17d30f51.svg" width="48" height="42" alt="Lightcoin" loading="lazy"> <span class="currencies__name"> Litecoin </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/dogecoin.4af7f576.svg" width="48" height="42" alt="Dogecoin" loading="lazy"> <span class="currencies__name"> Dogecoin </span> <span class="currencies__ammount"> $20.00 </span> </li> <li class="currencies__item"> <img class="currencies__image" src="icons/wallet.b2b6766f.png" width="48" height="42" alt="Wallet" loading="lazy"> <span class="currencies__name"> Epaycore </span> <span class="currencies__ammount"> $20.00 </span> </li> </ul> </div> </div> </section> </main> <footer class="footer"> </footer> <script>const getWellcomeHeaderHeight=()=>{const e=document.querySelector(".content__wellcome")?.offsetHeight;return document.documentElement.style.setProperty("--wellcome-height",`${e}px`),e};window.addEventListener("resize",getWellcomeHeaderHeight),getWellcomeHeaderHeight();</script> </div> </body></html>
+<!DOCTYPE html>
+<html lang="en" class="page scroll">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.0f1069a7.png" type="image/x-icon">
+  <title>Trust=&gt;FX | Withdraw money page</title>
+  <link rel="stylesheet" href="/account.21711d4b.css">
+  <link rel="stylesheet" href="/account.b10d73a7.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer=""></script>
+  <script src="/account.975ef6c8.js" defer=""></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+
+    
+
+    <main class="main">
+
+      <aside class="navigation scroll">
+
+  <div class="logo">
+    <img class="logo__image" src="/images/logo.cd13699a.svg" alt="Trust FX logo" height="37" width="160" loading="lazy">
+  </div>
+
+  <div class="navigation__inner ">
+    <div class="navigation__wallet">
+      <div class="navigation__wallet-number">
+        <span>
+          Saved money
+        </span>
+
+        <span class="text-gradient">
+          $56.874
+        </span>
+      </div>
+
+      <ul class="navigation__wallet-direction">
+        <li class="navigation__wallet-item">
+          <a class="navigation__wallet-link navigation__wallet-link--up" href="#" aria-label="Up trade">
+          </a>
+        </li>
+
+        <li class="navigation__wallet-item">
+          <a class="navigation__wallet-link navigation__wallet-link--down" href="#" aria-label="Up trade">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="navigation__menu">
+      <ul class="navigation__btns">
+        <li class="navigation__btn navigation__btn--active ">
+          <a class="navigation__btn-link navigation__btn-link--account btn" href="#">
+            <span>Your account</span>
+          </a>
+        </li>
+
+        <li class="navigation__btn ">
+          <a class="navigation__btn-link navigation__btn-link--deposit btn" href="#">
+            <span>Make deposit</span>
+          </a>
+        </li>
+
+        <li class="navigation__btn ">
+          <a class="navigation__btn-link navigation__btn-link--withdraw btn" href="#">
+            <span>Withdraw</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__item--squere">
+          <a class="navigation__link navigation__link--active" href="#">
+            Your deposits
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--book">
+          <a class="navigation__link" href="#">
+            Deposits history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--history">
+          <a class="navigation__link" href="#">
+            Earning history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--withdraw">
+          <a class="navigation__link" href="#">
+            Withdrawals history
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--refferals">
+          <a class="navigation__link" href="#">
+            Your refferrals
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--banner">
+          <a class="navigation__link" href="#">
+            Affilliate baners
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--settings">
+          <a class="navigation__link" href="#">
+            Edit account
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--shield">
+          <a class="navigation__link" href="#">
+            Security
+          </a>
+        </li>
+
+        <li class="navigation__item navigation__item--logout">
+          <a class="navigation__link" href="#">
+            Log Out
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <button class="burger" data-burger="" type="button">
+  </button>
+</aside>
+
+      <section class="content">
+
+        <div class="content__wellcome">
+
+  <h1 class="content__title title">
+    Welcome Back, <span>Dimas Dirga!</span>
+  </h1>
+
+  <div class="content__date">
+    <span>
+      Registration date: <span>Oct 20 2022</span>
+    </span>
+
+    <span>
+      Last access: <span>Oct 20 2022</span>
+    </span>
+  </div>
+
+
+</div>
+
+        <div class="content__inner">
+          <div class="content__main scroll">
+
+            <div class="money">
+  <h2 class="money__title title title--secondary">
+    Withdraw money
+  </h2>
+
+  <h3 class="money__subtitle title title--small">
+    Select eCurrency
+  </h3>
+
+  <ul class="money__list">
+    <li class="money__item money__item--paycore">
+      <input class="sr-only" type="radio" name="withdraw" id="core" checked="">
+
+      <label class="money__radio" for="core">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/pay-core.a494f519.svg" width="210" height="35" alt="Pay core logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="dogecoin">
+
+      <label class="money__radio" for="dogecoin">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/dogecoin-logo.308d0758.png" width="210" height="35" alt="Dogecoin logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="ripple">
+
+      <label class="money__radio" for="ripple">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/ripple-logo.b12eb47c.png" width="210" height="35" alt="Ripple logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="ton">
+
+      <label class="money__radio" for="ton">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/ton-logo.b39281a5.png" width="210" height="35" alt="Ton logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item">
+      <input class="sr-only" type="radio" name="withdraw" id="tron">
+
+      <label class="money__radio" for="tron">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/tron.4bb7999b.png" width="210" height="35" alt="Tron logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+
+    <li class="money__item money__item--tether">
+      <input class="sr-only" type="radio" name="withdraw" id="tether">
+
+      <label class="money__radio" for="tether">
+        <span class="money__radio-content">
+          <img class="money__image" src="/images/logos/trc-20.14d09e3e.svg" width="210" height="35" alt="Tether logo" loading="lazy">
+
+          <span class="text-gradient">
+            200.00
+          </span>
+        </span>
+
+        <span>
+          min: 5.00
+        </span>
+      </label>
+    </li>
+  </ul>
+
+  <form class="money__form" action="#">
+    <h3 class="money__subtitle title title--small">
+      Withdraw
+    </h3>
+
+    <input class="money__withdraw" type="number" placeholder="0.1000000" step="0.0000001">
+
+    <button class="money__form-btn btn" type="submit">
+      Request
+    </button>
+  </form>
+</div>
+
+          </div>
+
+          <div class="currencies scroll">
+  <h2 class="currencies__title title title--secondary">
+    We accept
+  </h2>
+
+  <ul class="currencies__list">
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/tether-usdt-trc20.6d7d5448.svg" width="48" height="42" alt="Tether" loading="lazy">
+
+      <span class="currencies__name">
+        Tether trc 20
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/tether-usdt-ether.91565386.svg" width="48" height="42" alt="Tether" loading="lazy">
+
+      <span class="currencies__name">
+        Tether erc 20
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/busd.013e0696.svg" width="48" height="42" alt="BUSD" loading="lazy">
+
+      <span class="currencies__name">
+        BUSD
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/usdc.810e2105.svg" width="48" height="42" alt="USDC" loading="lazy">
+
+      <span class="currencies__name">
+        USDC
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/tron.8b728648.svg" width="48" height="42" alt="TRON" loading="lazy">
+
+      <span class="currencies__name">
+        Tron
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/bitcoin.19e51b65.svg" width="48" height="42" alt="Bitcoin" loading="lazy">
+
+      <span class="currencies__name">
+        Bitcoin
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/etherum.795c5b3a.svg" width="48" height="42" alt="Ethereum" loading="lazy">
+
+      <span class="currencies__name">
+        Ethereum
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/bnb.e39e6f36.svg" width="48" height="42" alt="BNB" loading="lazy">
+
+      <span class="currencies__name">
+        BNB
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/ripple.b954230a.svg" width="48" height="42" alt="Ripple" loading="lazy">
+
+      <span class="currencies__name">
+        Ripple
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/lightcoin.516054ec.svg" width="48" height="42" alt="Lightcoin" loading="lazy">
+
+      <span class="currencies__name">
+        Litecoin
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/dogecoin.caab8400.svg" width="48" height="42" alt="Dogecoin" loading="lazy">
+
+      <span class="currencies__name">
+        Dogecoin
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+
+    <li class="currencies__item">
+      <img class="currencies__image" src="/icons/wallet.d15dc274.png" width="48" height="42" alt="Wallet" loading="lazy">
+
+      <span class="currencies__name">
+        Epaycore
+      </span>
+
+      <span class="currencies__ammount">
+        $20.00
+      </span>
+    </li>
+  </ul>
+  
+</div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+
+</footer>
+
+<script>const getWellcomeHeaderHeight = ()=>{
+    const headerHeight = document.querySelector(".content__wellcome")?.offsetHeight;
+    document.documentElement.style.setProperty("--wellcome-height", `${headerHeight}px`);
+    return headerHeight;
+};
+window.addEventListener("resize", getWellcomeHeaderHeight);
+getWellcomeHeaderHeight();
+
+</script>
+
+  </div>
+</body>
+
+</html>

@@ -20,20 +20,20 @@
     }
 
     @include media(desktop) {
-      grid-template-columns: 55px repeat(3, 1fr);
+      grid-template-columns: 55px 80px repeat(2, 1fr);
     }
 
     @include media(mobile-m) {
-      grid-template-columns: 35px repeat(3, 1fr);
+      grid-template-columns: 35px 55px repeat(2, 1fr);
     }
   }
 
-  .selectric-wrapper {
-    padding: 10px;
-  }
-
-  input.selectric-wrapper {
+  &__date {
+    border: 1px solid var(--color-gray-50);
+    border-radius: var(--radius-main);
+    padding: 8px;
     text-align: center;
+    width: 100%;
   }
 
   &.form {
@@ -42,6 +42,14 @@
     &::before {
       bottom: 0;
     }
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 10px;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 6px;
   }
 
   @include media(desktop) {
