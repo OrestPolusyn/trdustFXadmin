@@ -1,0 +1,41 @@
+{
+  "name": "parcel-bundler",
+  "version": "1.0.0",
+  "description": "Parcel bundler for dev",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build  --no-cache --no-content-hash   src/*.html --public-url ./ "
+  },
+  "keywords": [],
+  "author": "Orest Polusyn",
+  "license": "ISC",
+  "devDependencies": {
+    "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
+    "@parcel/optimizer-data-url": "^2.8.2",
+    "@parcel/optimizer-svgo": "^2.8.2",
+    "@parcel/transformer-inline-string": "^2.8.2",
+    "@parcel/transformer-postcss": "^2.8.2",
+    "@parcel/transformer-sass": "^2.8.2",
+    "@parcel/transformer-svg": "^2.8.2",
+    "@parcel/transformer-svgo": "^2.0.0-nightly.1739",
+    "parcel": "^2.8.2",
+    "parcel-namer-without-hash": "^0.0.1",
+    "parcel-optimizer-imagemin": "^1.0.0",
+    "parcel-packager-svg-sprite": "^2.0.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-svg-sprite": "^2.0.0",
+    "posthtml-expressions": "^1.11.0",
+    "posthtml-include": "^1.7.4",
+    "sharp": "^0.31.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-csstree-validator": "^2.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "dependencies": {
+    "selectric": "^1.13.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
