@@ -4,7 +4,7 @@
   "description": "Parcel bundler for dev",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build  --no-cache --no-content-hash   src/*.html --public-url ./ "
+    "build": "parcel build  --no-cache --no-content-hash --no-optimize   src/*.html --public-url ./ "
   },
   "keywords": [],
   "author": "Orest Polusyn",
